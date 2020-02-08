@@ -84,7 +84,7 @@ RMSEが約30となりました。このモデルを基準に、特徴量エン�
 
 featuretoolsには、エンティティという概念があり、データセットを登録して管理します。featuretoolsRパッケージでは、`as_entityset()` 関数でエンティティを作成します。
 
-なお、はじめてfeaturetoolsRパッケージを読み込む際には、Python環境 (miniconda) をインストールするか聞かれます。
+なお、はじめてfeaturetoolsRパッケージを読み込む際には、Python環境 (miniconda) をインストールするか聞かれます。**MyBinder.orgでこのRNotebookを実行しながらご覧いただいている場合は、コンソールに以下のメッセージが出ているでしょう。この環境ではPython環境もセットアップされているので、`n` と答えればよいです。**
 
 <div style="text-align:center">
 <img src="featuretoolsR_example01.png" width="80%"/>
@@ -136,6 +136,6 @@ pred.feature <- predict(model.feature, feature_df)
 sqrt(sum(pred.feature - feature_df[["成果"]])^2)
 ```
 
-多少ですが、RMSEが改善しました。特徴量エンジニアリングの成果が…あったことにしましょう。
+RMSEが変化したでしょうか。Python側の乱数に依存するのか、Rでシードを固定しても結果が一定しないようです。とりあえず、特徴量エンジニアリングの成果が…あったことにしましょう。
 
 このように、featuretoolsRパッケージを使うことで、機械学習モデルの精度向上に寄与する (かもしれない) 特徴量を、大量に、自動的に生成できます。
