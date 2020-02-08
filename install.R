@@ -1,0 +1,8 @@
+options(dependencies = TRUE)
+install.packages("renv")
+Sys.setenv(R_INSTALL_STAGED = FALSE)
+renv::install("remotes")
+renv::install("tidyverse")
+renv::install("rmarkdown")
+renv::install("randomForest")
+renv::install("featuretoolsR")
